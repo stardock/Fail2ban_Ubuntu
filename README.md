@@ -10,13 +10,13 @@ $ sudo vi /etc/fail2ban/jail.local
 ignoreip = 127.0.0.1 172.31.0.0/24 10.10.0.0/24 192.168.0.0/24
 
 # 客户端主机被禁止的时长（秒）
-bantime = 86400
+bantime = 864000
 
 # 客户端主机被禁止前允许失败的次数 
-maxretry = 5
+maxretry = 10
 
 # 查找失败次数的时长（秒）
-findtime = 600
+findtime = 7200
 
 mta = sendmail
 
@@ -30,7 +30,7 @@ logpath = /var/log/auth.log
 # Red Hat 系的发行版
 logpath = /var/log/secure
 # ssh 服务的最大尝试次数 
-maxretry = 3
+maxretry = 10
 ```
 
 Reference:  
